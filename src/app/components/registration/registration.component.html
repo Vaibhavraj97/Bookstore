@@ -1,0 +1,76 @@
+<div class="Card" fxLayout="row" fxLayoutAlign="center center">
+
+    <mat-card class="UICard">
+
+        <div>
+            <img class="img" src="../../../assets/book_store.png" alt="">
+        </div>
+
+        <div class="text">
+            ONLINESHOPPING
+        </div>
+    </mat-card>
+<mat-card class="UICardII">
+        <div fxLayout="row" fxLayoutAlign="center center">
+            <div class="login" routerLink="/login">
+                <P>LOGIN</P>
+            </div>
+            <div class="register">
+                <p>SIGNUP</p>
+            </div>
+           
+         <div class="fullname">
+            <form [formGroup]="registerForm" >
+                    <div>
+                        <mat-label>Full Name</mat-label>
+                    </div>
+                    <div>
+                        <mat-form-field class="register-formfield" appearance="outline">
+
+                            <input type="text" formControlName="fullName" matInput placeholder="fullName">
+                            
+
+                        </mat-form-field>
+                    </div>
+                    <div class="Id">
+                        <div>
+                            <mat-label>Email Id</mat-label>
+                        </div>
+                        <div> <mat-form-field appearance="outline">
+             <input type="text" formControlName="email" matInput placeholder="email">
+             </mat-form-field>
+                        </div> 
+                         <div class="password">
+                            <div>
+                                <mat-label>Password</mat-label>
+                            </div>
+                            <div>
+                                <mat-form-field appearance="outline">
+                                    <input type="text" formControlName="password" matInput placeholder="password">
+                                    
+                                </mat-form-field>
+                            </div>
+
+                            <div class="number">
+                                <div>
+                                    <mat-label>Mobile Number</mat-label>
+                                </div>
+                                <div>
+                                    <mat-form-field appearance="outline">
+
+                                        <input type="text" formControlName="mobileNo" matInput placeholder="mobileno">
+                                        </mat-form-field>
+                                </div>
+                                <div>
+                                    <button class="registerbutton"  (click)="onSubmit()"   mat-flat-button>Signup</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+            </form>
+             </div>
+           
+        </div>
+        
+    </mat-card>
+</div>

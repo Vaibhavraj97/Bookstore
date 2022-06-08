@@ -1,0 +1,125 @@
+<div class="btn" fxLayout="row" fxLayoutAlign="start center" style="margin-left: 100px;margin-top: 30px;">
+    <button mat-button>Home</button>
+    <span>/Book(01)</span>
+</div>
+
+<div fxLayout="row" fxLayoutAlign="center start" fxLayout.xs="row" fxFlex.xs="95">
+
+    <div class="smallimages" fxLayout="column" fxLayoutGap="10px">
+        <div class="small1">
+            <img class="img1" src="../../../assets/41oWBl4JBIL._SX404_BO1,204,203,200_.jpg" alt="">
+        </div>
+        <div class="small2">
+            <img class="img2" src="" alt="">
+        </div>
+    </div>
+
+    <div class="imageandbutton" fxLayout="column">
+
+        <div class="bigimage" fxLayout="row">
+            <div class="big1">
+                <img class="image1" src="../../../assets/41oWBl4JBIL._SX404_BO1,204,203,200_.jpg">
+            </div>
+        </div>
+
+        <div class="cartandwishlistbutton" fxLayout="row" fxLayoutGap="40px" fxLayoutAlign="space-between center">
+            <div>
+                <button mat-raised-button class="addtobag" (click)="addtobag(book)">
+                    ADD TO BAG
+                </button>
+            </div>
+            <div fxLayout="row" fxLayoutAlign="start center">
+                <button mat-flat-button class="wishlist" (click)="addtowishlist(book)">
+                    <mat-icon class="wishlistIcon">favorite</mat-icon>
+                    WISHLIST
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <div class="bookdetailsdiv" fxLayout="column" fxLayout.xs="column" fxFlex.xs="95">
+        <div class="entirebook" fxLayout="column" fxLayout.sm="column">
+
+            <div class="bookname">
+                {{bookdata?.bookName}}
+
+            </div>
+            <div class="author">
+                by {{bookdata?.author}}
+            </div>
+            <div class="rating" fxLayoutAlign="space-evenly center">
+                4.5<img class="Star" src="../../../assets/star_outline_white_24dp.svg" alt="">
+            </div>
+            <div class="quantity">
+                ({{bookdata?.quantity}})
+            </div>
+
+            <div class="price" fxLayout="row" fxLayoutGap="10px">
+                <div class="discountprice">
+                    Rs.{{bookdata?.discountPrice}}
+                </div>
+                <div class="originalprice">
+                    <del> Rs.{{bookdata?.price}} </del>
+                </div>
+            </div>
+
+        </div>
+
+        <div fxLayout="column" fxLayoutAlign="start start">
+            <span class="bookdetail">Book Detail</span>
+            <p class="bookparagraph">
+                This book aims to equip you with enough knowledge of the SharePoint Framework in conjunction with skills to use powerful<br>
+                tools such as Node.js, npm, Yeoman, Gulp, TypeScript, and so on to succeed in the role of a SharePoint developer.
+                 The book starts with a brief introduction to the SharePoint evolution across versions and the rise <br>of the SharePoint
+                Framework and the opportunities you may come across along with an overview of the key topics covered in the book.
+                Who This Book is For?
+                The book is intended for anyone looking for a career in modern SharePoint, all <br>aspiring SharePoint developers who want
+                to learn the most powerful technique to extend the<br> SharePoint user interface or working professionals who want to switch
+                their career in SharePoint.
+             </p>
+        </div>
+
+        <div class="customerfeedback">
+            <span>Customer Feedback</span>
+        </div>
+
+        <div class="overallrating">
+            <div class="rate">
+                <p class="ratename">Overall Rating</p>
+                <div>
+                    <div class="star-widget">
+
+                        <input type="radio" name="rate" id="rate-5" [(ngModel)]="value" value="5">
+                        <label for="rate-5" class="fa fa-star"></label>
+
+                        <input type="radio" name="rate" id="rate-4" [(ngModel)]="value" value="4">
+                        <label for="rate-4" class="fa fa-star"></label>
+
+                        <input type="radio" name="rate" id="rate-3" [(ngModel)]="value" value="3">
+                        <label for="rate-3" class="fa fa-star"></label>
+
+                        <input type="radio" name="rate" id="rate-2" [(ngModel)]="value" value="2">
+                        <label for="rate-2" class="fa fa-star"></label>
+
+                        <input type="radio" name="rate" id="rate-1" [(ngModel)]="value" value="1">
+                        <label for="rate-1" class="fa fa-star"></label>
+
+                    </div>
+                </div>
+
+            </div>
+            <div>
+                <input [(ngModel)]="feedback" class="review" type="text" placeholder="Write your review">
+
+            </div>
+            <div fxLayoutAlign="end center">
+                <button class="submitbutton" (click)="addfeedback()" mat-flat-button color="primary">Submit</button>
+            </div>
+        </div>
+
+     </div>
+    <div>
+        <router-outlet></router-outlet>
+    </div>
+
+</div>

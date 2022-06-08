@@ -1,0 +1,44 @@
+<div class="dash">
+    <mat-toolbar class="mattoolbar" fxLayoutAlign="center center">
+        <mat-toolbar-row>
+            <div class="imagebook" fxLayout="row" fxLayout.xs="row">
+                <div>
+                    <img class="book" src="../../../assets/education (1).svg">
+                </div>
+            </div>
+            <div class="text">
+                <h5>Bookstore</h5>
+            </div>
+            <mat-card class="searchbar" fxLayout="row" fxLayout.xs="row">
+                <img class="imgsearch" src="../../../assets/search_black_24dp (1).svg">
+
+                <input class="searchtext" type="text" name="search" placeholder="search" #search>
+            </mat-card>
+            <div class="profile" [matMenuTriggerFor]="menu"fxLayout="column" fxLayoutAlign="center center" fxLayout.xs="row" fxFlex.xs="50">
+                <img class="imgpersonwhite" src="../../../assets/person_white_24dp.svg" alt="">
+                <p>Profile</p>
+                <mat-menu class="matmenu" #menu="matMenu">
+                    <div fxLayout="column" fxLayoutGap="3px" style="width: 200px;">
+                        <h3 class="welcometext">Hello,Vaibhav</h3>
+                        
+                    </div>
+                     <button class="wishlistbutton"  mat-menu-item fxLayoutGap="0px"(click)="wishlist()">
+                        <mat-icon class="wishlistIcon">favorite</mat-icon>
+                        My Wishlist
+                    </button>
+                    <button class="Myordersbutton"  mat-menu-item fxLayoutGap="0px">My Orders</button>
+                    <div style="margin-top: 10px;" mat-menu-item fxLayoutGap="0px">
+                        <button (click)="Logout()" class="loginbutton" style="color: red;">LogOut</button>
+                    </div>
+                </mat-menu>
+            </div>
+            <div class="cart" (click)="cart()" fxLayout="column" fxLayoutAlign="center center"   fxLayout.xs="row" fxFlex.xs="50">
+                <img class="cartimg" src="../../../assets/shopping_cart_white_24dp.svg" alt="">
+                <p style="margin-top:-10px;">Cart</p>
+            </div>
+        </mat-toolbar-row>
+    </mat-toolbar>
+    <div>
+        <router-outlet></router-outlet>
+    </div>
+    <div>

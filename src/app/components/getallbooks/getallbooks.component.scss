@@ -1,0 +1,126 @@
+.booklibrary{
+  margin-left: 134px; 
+  margin-top: 45px;
+}
+.books{
+  font-size: 25px;
+}
+
+.library{
+  border: 1px solid gainsboro;
+  width: 250px;
+  height: 350px;
+  
+  margin: 20px;
+}
+.library:hover{
+  box-shadow: rgba(0,0,0,0.24) 0px 3px 8px;
+  
+}
+.img{
+  width: 251px;
+  height: 210px;  
+  background-color: gainsboro;
+  margin-top: -1px;
+}
+.sharppoint{
+  width: 110px;
+  height: 140px;
+  margin-left: 70px;
+  margin-top: 35px;
+  cursor: pointer;
+}
+.bookname{
+  margin-left: 15px;
+  font-family: Roboto;
+  font-weight: 500; 
+  margin-top: 8px;
+}
+.author{
+ 
+  font-size: 10px; 
+  color: grey; 
+  margin-left: 15px;
+    
+}
+.rating{
+  font-size: 10px; 
+  margin-left: 15px;
+  background: rgba(0, 100, 0, 0.87);
+  color: white;
+  height: 14px;
+  width: 35px;
+}
+.rating{
+  font-size: 10px; 
+  margin-left: 15px;
+  background: rgba(0, 100, 0, 0.87);
+  color: white;
+  height: 14px;
+  width: 35px;
+}
+.Star{
+  height: 11px;
+  width: 11px;
+  font-size: 10px; 
+  margin-top: -1px;
+  // margin-left: 3px;
+}
+
+.quantity{
+  font-size: 10px;
+  margin-top: -18px;
+  margin-left: 55px;
+}
+.price{
+  font-size: 10px;
+  margin-left: 15px;
+  margin-bottom: 10%;
+}
+.discountprice{
+  font-weight: 600;
+}
+.originalprice{
+  color: grey;
+  margin-left: 5px;
+}
+.cartandwishlistbutton{
+  display:flex;
+  margin-left:-90px;
+  width:100%;
+  margin-top: 5px;
+}
+
+// .addtobag {
+//   background: brown;
+//   color: rgba(255, 255, 255, 0.767);
+//   width:100%;
+//  display:inline;
+// }
+
+// .wishlist {
+//   background: black;
+//   color: rgba(255, 255, 255, 0.767);
+//   width:90%;
+//   display:inline-flex;
+// }
+.addtobag{
+  background: brown;
+  color: rgba(255, 255, 255, 0.767);
+  margin-top: 16px; 
+  margin-left: 5px; 
+}
+.wishlist{
+  // background: brown; 
+  background:black;
+  color: rgba(255, 255, 255, 0.767);
+  margin-left: 125px; 
+  width: 105px;
+  // margin-bottom: 90px;
+  margin-top: -35px; 
+
+}
+.wishlistIcon{
+color: white;
+margin-left:-4px;
+}
